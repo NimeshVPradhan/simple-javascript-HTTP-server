@@ -5,10 +5,20 @@ function getData(url) {
     .then(function (res){
         return res.data;
     }).catch(function(err){
-      return err;
+      	return err;
+    })
+}
+
+function postData(url) {
+	  return axios.post(url)
+    .then(function (res){
+        return res.data;
+    }).catch(function(err){
+      	return err;
     })
 }
 
 module.exports = {
-  getData: getData
+  getData: getData,
+  postData: postData
 }

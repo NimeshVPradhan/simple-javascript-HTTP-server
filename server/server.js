@@ -14,11 +14,24 @@ function serve(port) {
 function setupRoutes(app) {
 	app.use(cors());
 	app.get('/proxy/*', getData(app));
+	app.post('/proxy/*',postData(app));
 }
 
 function getData(app){
   return function(request, response, next) {
-      axios_ops.getData(request.url.substring(1)).
+      axios_ops.getData(request.url.substring(7)).
+			then(function(results) {
+				response.json(results);
+			}).
+		catch((err) => {
+	  		response.json(err);
+			});
+    }
+}
+
+function postData(app){
+  return function(request, response, next) {
+      axios_ops.postData(request.url.substring(7)).
 			then(function(results) {
 				response.json(results);
 			}).
