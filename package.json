@@ -1,5 +1,5 @@
 {
-  "name": "npradha_p3",
+  "name": "simple-javascript-HTTP-server",
   "version": "1.0.0",
   "description": "",
   "main": "options.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "NimeshPradhan",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
